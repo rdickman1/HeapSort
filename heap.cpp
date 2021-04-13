@@ -7,6 +7,7 @@
 #include<fstream>
 #include<string>
 #include<sstream>
+#include<vector>
 #include "heapFuncts.h"
 using namespace std;
 
@@ -18,7 +19,7 @@ int main(){
 	ofstream out;
 	string line;
 	istringstream s;
-	double nodes[100];
+	vector<double> nodes;
 	double num;
 
 	// Opening input file "data1.txt" and output file "out1.txt"
@@ -43,11 +44,11 @@ int main(){
 			
 			// Repeats while there are numbers in the string and assigns them to the array
 			while(s >> num){
-				nodes[count] = num;
-				count++;
+				nodes.push_back(num);
+				
 			}
 					
-			sortHeap(nodes, (count - 1));
+			sortHeap(nodes);
 			
 			
 			// Outputs sorted array to the out1.txt file

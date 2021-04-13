@@ -1,8 +1,8 @@
 #ifndef HEAPFUNCTS_H
 #define HEAPFUNCTS_H
 
-void makeHeap(double [], int, int);
-void sortHeap(double [], int);
+void makeHeap(vector<double>, int, int);
+void sortHeap(vector<double>);
 
 int leftChild(int);
 
